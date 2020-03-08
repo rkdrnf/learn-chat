@@ -20,12 +20,18 @@
 //문제
 //어레이를 파라미터로 받아서 어레이 아이템의 값을 키로 가지고 해당 아이템의 인덱스를 값으로 가지는 오브젝트를 반환하는 함수를 작성하시오
 
+// const arr = ['a', 'b', 'c', 'd'];
+// arr.length === 4
+// arr[0] arr[1] arr[2] arr[3]
 
 function convert(arr) {
   const result = {};
 
   for (let n = 0; n < arr.length; n++) {
-    result[arr[n]] = n;
+    const index = n;
+    const item = arr[index];
+
+    result[item] = index;
   }
 
   return result;
